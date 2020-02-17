@@ -18,7 +18,7 @@ for line in lines:
     line = line.rstrip()
     if len(line) <= 0 or re.findall('^#', line):
         continue
-    new_line.append(f'\t<{line[:line.index("=")].lower()} {line}>\n')
+    new_line.append(f'\t<{line[:line.index("=")].lower()} {line}\>\n')
 new_line.append(f'</{wrapper}>\n')
 
 with open(ofile, 'w') as f: 
